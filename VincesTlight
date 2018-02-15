@@ -1,0 +1,61 @@
+//https://docs.oracle.com/javase/7/docs/api/index.html API Documents
+package vincesface;
+
+import javax.swing.JComponent;
+import java.awt.geom.Ellipse2D; //for face
+import java.awt.Rectangle; //for eyes
+import java.awt.geom.Line2D; //for mouth
+import java.awt.Color; //for errthang
+import java.awt.Graphics;
+import java.awt.Graphics2D; //main drawing, but we will inherit (methods) from Graphics
+
+
+public class VincesTlight extends JComponent {
+    
+    //we are going to inherit some of the properties from our JComponent
+    public void paintComponent (Graphics g)
+    {
+        Graphics2D g2var = (Graphics2D) g; //g2var is my variable
+        
+        Ellipse2D.Double head = new Ellipse2D.Double(5, 20, 500, 650);
+        g2var.draw(head); //drawing head
+        
+        Rectangle eye = new Rectangle(115, 250, 50, 35);
+        g2var.setColor(Color.black);
+        g2var.fill(eye);
+        eye.translate(250, 0);
+        g2var.fill(eye);
+        
+        Ellipse2D.Double nose = new Ellipse2D.Double(240, 375, 25, 5);
+        g2var.draw(nose);
+        g2var.fill(nose);
+        
+        Line2D.Double mouth1 = new Line2D.Double(115, 500, 365, 500);
+        g2var.setColor(Color.red);
+        g2var.fill(mouth1);
+        g2var.draw(mouth1);
+        
+        Line2D.Double mouth2 = new Line2D.Double(215, 600, 365, 500);
+        g2var.setColor(Color.red);
+        g2var.fill(mouth2);
+        g2var.draw(mouth2);
+        
+        Line2D.Double mouth3 = new Line2D.Double(215, 600, 115, 500);
+        g2var.setColor(Color.red);
+        g2var.fill(mouth3);
+        g2var.draw(mouth3);
+        
+        Line2D.Double brow1 = new Line2D.Double(75, 200, 175, 200);
+        g2var.setColor(Color.black);
+        g2var.fill(brow1);
+        g2var.draw(brow1);
+        
+        Line2D.Double brow2 = new Line2D.Double(350, 200, 450, 200);
+        g2var.setColor(Color.black);
+        g2var.fill(brow2);
+        g2var.draw(brow2);
+        
+        g2var.drawString("By Vincent Porras", 115, 700);
+    }
+    
+}
