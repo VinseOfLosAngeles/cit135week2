@@ -59,3 +59,37 @@ public class VincesTlight extends JComponent {
     }
     
 }
+
+
+/*IN CLASS NOTES IN CLASS NOTES IN CLASS NOTES
+https://docs.oracle.com/javase/7/docs/api/index.html
+
+1. Top left has main packages
+
+select javax.swing
+
+	bottom left has classes
+
+	select Jframe
+
+------------------------
+use new to create object
+
+Jframe() features overload. See "Constructor Summary"
+Recall the constructor knows which 'version' to use depending on what arguments we pass it
+---------------------------
+
+
+
+2. select package java.awt
+	select class Graphics2D
+----
+Graphics2D has Draw method, where we pass a shape (we must create or copy a shape) and Draw will work it out.
+----
+
+
+
+PROGRAMMING ASSIGNMENT 2______________________________
+Traffic light
+We have thus far created a 
+*/
