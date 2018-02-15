@@ -1,0 +1,40 @@
+//https://docs.oracle.com/javase/7/docs/api/index.html
+ 
+package vincesface;
+
+import javax.swing.JFrame;
+
+public class VincesFace 
+{
+
+    public static void main(String[] args)
+    {
+        
+       VincesTlight vinceslight = new VincesTlight();
+       JFrame faceframe = new JFrame (); //Main constructor
+       
+       //i. new allocates memory for JFrame so we can manipulate those
+       //variables in JFrame class
+       //We declared the object (variable) faceframe of type JFrame
+       //&we assigned/initialized it using constructor new JFrame ();
+       
+       faceframe.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); //Main Methods
+       
+       //ii. When I close my variable, do this
+       
+       faceframe.setSize(1000, 1000); //Methods inherited from class java.JFrame
+       
+       faceframe.setTitle("VincesFace.java Copyright 2.14.2018"); //Methods inherited from class java.JFrame\
+       faceframe.add(vinceslight);
+       
+       faceframe.setVisible(true); //Methods inherited from class java.JFrame
+       
+       JFrame trafficframe = new JFrame ();
+       trafficframe.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+       trafficframe.setSize(600, 600); 
+       trafficframe.setTitle("trafficframe Copyright 2.14.2018"); 
+       trafficframe.setVisible(true); 
+       
+    }
+    
+}
